@@ -54,7 +54,7 @@ public class SearchStaysStepDefinitions {
     }
 
     @Then("^he can see (.*)$")
-    public void heCanSeeLoSentimosNoEsPosibleRealizarReservasParaMásDeNoches(String message) {
+    public void heCanSee(String message) {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Message.isTo(StayPage.MESSAGE_ALERT),
                 Matchers.equalTo(message)).orComplainWith(CreateAccountException.class,
                 ExceptionsConstants.STAY_ERROR));
